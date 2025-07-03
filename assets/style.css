@@ -35,7 +35,7 @@
 
 .logo-slide {
   display: flex;
-  gap: 100px;
+  gap: 120px;
   padding: 48px 50px;
   align-items: center;
 }
@@ -59,13 +59,12 @@
   }
 
   .logo-slide {
-    gap: 60px;
+    gap: 90px;
     padding: 24px 32px;
   }
 }
-/* CSS cho bố cục */
 .layout--container {
-  max-width: 1200px; /* Hoặc độ rộng theme của bạn */
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -73,11 +72,32 @@
 .layout--full-width {
   max-width: 100%;
 }
-
-/* CSS cho hiệu ứng Hover */
 .hover--scale .logo-wrapper img {
   transition: transform 0.3s ease;
 }
 .hover--scale .logo-wrapper:hover img {
   transform: scale(1.15);
+}
+/* Thêm vào cuối file style.css */
+
+.magnifying-glass-zone {
+    position: absolute;
+    /* Định vị chính giữa slider */
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    
+    width: 200px; /* Chiều rộng của vùng kính lúp */
+    height: 100%;
+    
+    /* Tùy chọn: Thêm hiệu ứng viền hoặc nền để dễ hình dung */
+    /* border-left: 1px dashed #ccc; */
+    /* border-right: 1px dashed #ccc; */
+    
+    z-index: 1; /* Nằm dưới lớp phủ mờ */
+}
+
+/* Đảm bảo logo có transition mượt mà */
+.logo-wrapper {
+    transition: transform 0.2s ease-out;
 }

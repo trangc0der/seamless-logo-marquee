@@ -55,7 +55,8 @@ function slm_logo_marquee_shortcode_handler( $atts ) {
             height: <?php echo intval($settings['logo_height']); ?>px;
         }
     </style>
-    <div id="<?php echo $container_id; ?>" class="<?php echo implode(' ', $container_classes); ?>">
+    <div id="<?php echo $container_id; ?>" class="<?php echo implode(' ', $container_classes); ?>  with-magnifying-glass">
+        <div class="magnifying-glass-zone"></div>
         <div class="marquee-mask-left"></div>
         <div class="marquee-mask-right"></div>
         <div class="marquee-track" id="<?php echo $track_id; ?>">
